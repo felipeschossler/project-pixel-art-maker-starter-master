@@ -22,13 +22,13 @@ $(document).ready(function(){
                 addTr = $(pixelCanvas).append('<tr></tr>');
                 for(cont1 = 1; cont1 <= inputWidht; cont1++){
                     addTd = $('tr:last').append('<td></td>');
-                   
+                    $('td').click(function() {
+                        $(this).css("background-color", colorPicker);
+                    });
                 }
             }
 
-            $('td').click(function() {
-                $(this.colorPicker);
-            });
+            
 
             return false;
         });
