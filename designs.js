@@ -11,7 +11,7 @@ $(document).ready(function(){
     //function that reads the value of the inputs
 
 
-        $(sizePicker).submit(function(){
+        $(sizePicker).unbind().bind("submit",function(){
 
             colorPicker = $(colorPicker).val();
             inputHeight = $(inputHeight).val();
