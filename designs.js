@@ -10,28 +10,25 @@ $(document).ready(function(){
 
     //function that reads the value of the inputs
 
+    $(sizePicker).submit(function(){
 
-        $(sizePicker).unbind().bind("submit",function(){
-
-            colorPicker = $(colorPicker).val();
-            inputHeight = $(inputHeight).val();
-            inputWidht = $(inputWidht).val();
-            
-            //loop for Height and Widht
-            for(cont = 1; cont <= inputHeight; cont++){
-                addTr = $(pixelCanvas).append('<tr></tr>');
-                for(cont1 = 1; cont1 <= inputWidht; cont1++){
-                    addTd = $('tr:last').append('<td></td>');
-                    $('td').click(function() {
-                        $(this).css("background-color", colorPicker);
-                    });
-                }
+        colorPicker = $(colorPicker).val();
+        inputHeight = $(inputHeight).val();
+        inputWidht = $(inputWidht).val();
+        
+        //loop for Height and Widht
+        for(cont = 1; cont <= inputHeight; cont++){
+            addTr = $(pixelCanvas).append('<tr></tr>');
+            for(cont1 = 1; cont1 <= inputWidht; cont1++){
+                addTd = $('tr:last').append('<td></td>');
+                $('td').click(function() {
+                    $(this).css("background-color", colorPicker);
+                });
             }
-
-            
-
-            return false;
-        });
+        }
+        
+        return false;
+    });
     
 });
 
