@@ -25,6 +25,7 @@ td {
 table {
     border-collapse: collapse;
     margin: 0 auto;
+    cursor: url('https://raw.githubusercontent.com/wesbos/CSS-Cursors/gh-pages/source/santahand.png'), default;
 }
 
 tr {
